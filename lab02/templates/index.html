@@ -1,17 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Thực hành An toàn thông tin nâng cao</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+
+        body{
+            background:#f1f3f6;
+        }
+
+        .header{
+            text-align:center;
+            margin-top:40px;
+        }
+
+        .logo{
+            width:180px;
+        }
+
+        .title{
+            font-weight:bold;
+            margin-top:15px;
+        }
+
+        .menu-area{
+            margin-top:40px;
+        }
+
+        .menu-card{
+            border:none;
+            border-radius:15px;
+            padding:30px;
+            text-align:center;
+            transition:0.3s;
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .menu-card:hover{
+            transform:translateY(-8px);
+            box-shadow:0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .icon{
+            font-size:40px;
+            margin-bottom:15px;
+        }
+
+        a{
+            text-decoration:none;
+            color:black;
+        }
+
+    </style>
+
 </head>
+
 <body>
-    <div class="container">
-        <img src="https://file1.hutech.edu.vn/file/editor/homepage/stories/hinh34/logo%20CMYK-01.png" alt="hutech" style="display: block; margin-left: auto; margin-right: auto; width: 30%;">
-        <h4 style="font-weight: bold; text-align: center;">BÀI THỰC HÀNH BẢO MẬT THÔNG TIN NÂNG CAO</h4>
-        <ul style="margin-top: 30px;">
-            <li><a href="/caesar">Ceasar Cipher</a></li>
-            <li><a href="/rsa">RSA Cipher</a></li>
-        </ul>
-    </div>
+
+<div class="container">
+
+<div class="header">
+
+<img src="https://file1.hutech.edu.vn/file/editor/homepage/stories/hinh34/logo%20CMYK-01.png"
+class="logo">
+
+<h4 class="title">
+BÀI THỰC HÀNH BẢO MẬT THÔNG TIN NÂNG CAO
+</h4>
+
+</div>
+
+
+<div class="row menu-area">
+
+<div class="col-md-4">
+<a href="/caesar">
+<div class="card menu-card">
+<div class="icon text-primary">
+<i class="fa-solid fa-key"></i>
+</div>
+<h5>Caesar Cipher</h5>
+</div>
+</a>
+</div>
+
+<div class="col-md-4">
+<a href="/vigenere">
+<div class="card menu-card">
+<div class="icon text-success">
+<i class="fa-solid fa-lock"></i>
+</div>
+<h5>Vigenere Cipher</h5>
+</div>
+</a>
+</div>
+
+<div class="col-md-4">
+<a href="/playfair">
+<div class="card menu-card">
+<div class="icon text-warning">
+<i class="fa-solid fa-shield-halved"></i>
+</div>
+<h5>Playfair Cipher</h5>
+</div>
+</a>
+</div>
+
+<div class="col-md-6 mt-4">
+<a href="/railfence">
+<div class="card menu-card">
+<div class="icon text-info">
+<i class="fa-solid fa-wave-square"></i>
+</div>
+<h5>RailFence Cipher</h5>
+</div>
+</a>
+</div>
+
+<div class="col-md-6 mt-4">
+<a href="/transposition">
+<div class="card menu-card">
+<div class="icon text-danger">
+<i class="fa-solid fa-random"></i>
+</div>
+<h5>Transposition Cipher</h5>
+</div>
+</a>
+</div>
+
+</div>
+
+</div>
+
 </body>
 </html>
