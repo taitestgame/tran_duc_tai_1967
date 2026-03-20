@@ -150,8 +150,13 @@ def railfence_decrypt():
 @app.route("/api/caesar/encrypt", methods=["POST"])
 def caesar_encrypt():
     data = request.json
-    plain_text = data['plain_text']
-    key = int(data['key'])
+    plain_text = data.get('plain_text')
+    key = data.get('key')  # ✅ nhận string
+
+    try:
+        key = int(key)  # ✅ convert an toàn
+    except:
+        return jsonify({"error": "Key phải là số nguyên"})
 
     encrypted_text = caesar_cipher.encrypt_text(plain_text, key)
 
@@ -161,8 +166,13 @@ def caesar_encrypt():
 @app.route("/api/caesar/decrypt", methods=["POST"])
 def caesar_decrypt():
     data = request.json
-    cipher_text = data['cipher_text']
-    key = int(data['key'])
+    cipher_text = data.get('cipher_text')
+    key = data.get('key')
+
+    try:
+        key = int(key)
+    except:
+        return jsonify({"error": "Key phải là số nguyên"})
 
     decrypted_text = caesar_cipher.decrypt_text(cipher_text, key)
 
